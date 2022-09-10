@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.700e94ef.css",
+    "main.js": "/static/js/main.53f4e82f.js",
+    "static/media/cookingGif.gif": "/static/media/cookingGif.e319509fc23be42db183.gif",
+    "index.html": "/index.html",
+    "main.700e94ef.css.map": "/static/css/main.700e94ef.css.map",
+    "main.53f4e82f.js.map": "/static/js/main.53f4e82f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.700e94ef.css",
+    "static/js/main.53f4e82f.js"
+  ]
+}

@@ -25,7 +25,7 @@ const Home = () => {
         </div>
         <div className="home-card">
           <p>Read more about our projects </p>
-          <a href="https://bc.fi" target="_blank">Business College Helsinki</a>
+          <a href="https://bc.fi" target="_blank" rel="noreferrer">Business College Helsinki</a>
         </div>
       </div>
     </main>
