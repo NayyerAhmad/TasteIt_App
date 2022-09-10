@@ -3,18 +3,17 @@ import axios from 'axios';
 
 const RecipeForm = () => {
   const [data, setData] = useState({
-    name: '',
-    author: '',
-    desc: '',
-    country_code: '',
-    img: '',
-    inc: [],
-    inst: '',
+    recipename: "",
+    description: "",
+    country_code: "",
+    image: "",
+    ingredients: [],
+    instructions: "",
   });
 
   // Ingredients as a separated state which contains one object by default. When adding new ingredients, the array will have more objects.
   const [ingredients, setIngredients] = useState([
-    { id: 1, incName: '', quantity: '' },
+    { id: 1, ingredientName: "", quantity: "" },
   ]);
 
   // countries state is for saving data from restcountries API
@@ -50,7 +49,7 @@ const RecipeForm = () => {
   // This event handler will add an empty ingredient object to the ingredients array.
   const addMore = (e) => {
     e.preventDefault();
-    const newInc = { id: ingredients.length + 1, incName: '', quantity: '' };
+    const newInc = { id: ingredients.length + 1, incName: "", quantity: "" };
     setIngredients([...ingredients, newInc]);
   };
 
