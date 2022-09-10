@@ -13,7 +13,7 @@ const Home = () => {
       <div className="card-list">
         <div className="home-card">
           <p>Browse Recipes <br />
-            Search for the rcipes based on the recipe name or country
+            Search for the recipes based on their names or country of origin
           </p>
           <Link to="/RecipeList">All Recipes</Link>
         </div>
