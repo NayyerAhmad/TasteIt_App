@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
+import HeroBanner from "./HeroBanner";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
-  return <div>HOME</div>;
+  return (
+    <HeroBanner />
+  )
 };
 
 export default Home;
