@@ -32,12 +32,12 @@ const RecipeForm = () => {
   };
 
   // Bit more complicated event handler for getting data from ingredients. First, we spread the current ingredients state and then look for that specific object in the array. We use the index, which is passed to the event handler. After updating the value in inputs, we will overwrite the Data state and add the ingredients array.
-  const changeIncData = (e, i) => {
+  const changeIngredientData = (e, i) => {
     const { name, value } = e.target;
-    const incList = [...ingredients];
-    incList[i][name] = value;
-    setIngredients(incList);
-    setData({ ...data, inc: ingredients });
+    const ingredientList = [...ingredients];
+    ingredientList[i][name] = value;
+    setIngredients(ingredientList);
+    setData({ ...data, ingredients: ingredients });
   };
 
   // This event handler is reacting to our select event handler. We get the value from select, and then we find the correct alpha2Code. After that, we save valid code to the Data state.
@@ -49,17 +49,25 @@ const RecipeForm = () => {
   // This event handler will add an empty ingredient object to the ingredients array.
   const addMore = (e) => {
     e.preventDefault();
-    const newInc = { id: ingredients.length + 1, incName: "", quantity: "" };
-    setIngredients([...ingredients, newInc]);
+    const newIngredient = { id: ingredients.length + 1, ingredientName: "", quantity: "" };
+    setIngredients([...ingredients, newIngredient]);
   };
 
   // After we have all data collected from inputs, we post the Data object from state.
   const submitData = (e) => {
     axios.post('http://localhost:3001/recipies', data);
+    // add message for submitting a recipe
+    // const submitRecipe = document.createElement("p");
+    // submitRecipe.innerHTML = "Successfully added your recipe!";
+    // document.querySelector(".submitRecipe").appendChild(submitRecipe);
   };
 
   return (
     // Please note that you have to declare each input handler separately because we have three different kinds of input handlers. Otherwise, the latest handler will overwrite the previous ones.
+    <div>
+      <div>
+        <h2>Add your recipe</h2>
+      </div>
     <form onSubmit={submitData}>
       <div>
         <label htmlFor="name">Name</label>
@@ -96,16 +104,16 @@ const RecipeForm = () => {
                 type="text"
                 name="quantity"
                 id="quantity"
-                onChange={(e) => changeIncData(e, i)}
+                onChange={(e) => changeIngredientData(e, i)}
               />
             </div>
             <div>
-              <label htmlFor="incName">Ingredient</label>
+              <label htmlFor="ingredientName">Ingredient</label>
               <input
                 type="text"
-                name="incName"
-                id="incName"
-                onChange={(e) => changeIncData(e, i)}
+                name="ingredientName"
+                id="ingredientName"
+                onChange={(e) => changeIngredientData(e, i)}
               />
             </div>
           </div>
@@ -118,6 +126,7 @@ const RecipeForm = () => {
       </div>
       <input type="submit" value="Add recipe" />
     </form>
+  </div>
   );
 };
 
