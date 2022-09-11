@@ -1,19 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// used destructured props
 
 const RecipeCard = (props) => {
   return (
     <div className="cardMain">
       <div className="imgMain">
-        <img className='ImgCard' src={props.img} alt={props.alt} />
+        <img className='ImgCard' src={props.image} alt="food_pic" />
       </div>
 
       <div className="cardDetails">
         <div className="cardHeader">
           <h2>{props.name}</h2>
-          <img className='countryFlag' src={props.countryflag} alt={props.altFlag} />
+          <img className='countryFlag' src={props.flag} alt="flag" />
         </div>
         <div className="cardInfoMain">
           <p>{props.description}</p>

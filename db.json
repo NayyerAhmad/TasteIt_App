@@ -2,8 +2,11 @@
   "recipies": [
     {
       "name": "Plain Paratha",
+      "image": "https://source.unsplash.com/KusGQYgRgSE/1600*900",
+      "id": 1,
       "author": "Naseer",
-      "description": "Parathas are simple flatbreads that are made with whole wheat (or atta) flour and just a few other simple ingredients. A soft dough is prepared by hand, formed and flattened, and then folded several times to creats lots of flaky layers. They are then roasted to perfection and served warm with a variety of indian dishes",
+      "flag": "https://flagcdn.com/pk.svg",
+      "description": "Parathas are simple flatbreads that are made with whole wheat (or atta) flour and just a few other simple ingredients.",
       "ingredients": [
         {
           "id": 1,
@@ -21,9 +24,7 @@
           "quantity": "1 tbsp"
         }
       ],
-      "inst": "In a medium bowl, whisk together milk and egg. Add dry ingredients to milk mixture; whisk until all is neat. ",
-      "img": "https://source.unsplash.com/ZgRTuPsmFQg/1600x900",
-      "id": 1,
+      "instructions": "Mix all the ingredients and add some water to make a dough. Make small balls from the dough and flaten it. The heat a pan, put some oil and fry the flattend dough on it",
       "country_code": "PK"
     }
   ]

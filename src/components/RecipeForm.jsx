@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const RecipeForm = () => {
   const [data, setData] = useState({
-    recipename: "",
+    name: "",
     description: "",
     country_code: "",
     image: "",
