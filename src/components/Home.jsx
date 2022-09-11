@@ -12,14 +12,14 @@ const Home = () => {
       <h2 className="title">Searching for recipes?!?</h2>
       <div className="card-list">
         <div className="home-card">
-          <p>Browse Recipes <br />
+          <p><b>Browse Recipes</b> <br />
             Search for the recipes based on their names or country of origin
           </p>
           <Link to="/RecipeList">All Recipes</Link>
         </div>
         <div className="home-card">
-          <p>Add Recipe <br />
-            Help the cooking community with your recipes!
+          <p><b> Add Recipe </b><br />
+            Help the cooking community with your own recipes!
           </p>
           <Link to="/RecipeForm">Add Your Recipe</Link>
         </div>
