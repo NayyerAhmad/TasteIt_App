@@ -3,6 +3,8 @@ import axios from 'axios';
 import RecipeCard from './RecipeCard';
 
 const RecipeList = () => {
+  // add search function
+  const [search, setSearch] = useState("");
   const [recipies, setRecipies] = useState([]);
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(false);
